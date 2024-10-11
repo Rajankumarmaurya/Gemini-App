@@ -1,8 +1,10 @@
 const express = require("express");
 const port = process.env.PORT || 3000;
 const app = express();
+const cors = require('cors')
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(cors());
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
