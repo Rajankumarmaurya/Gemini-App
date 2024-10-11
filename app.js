@@ -21,6 +21,12 @@ app.post("/get", async (req, res) => {
     }
 });
 
+app.get('*',(req,res)=>{
+    res.status(404).json({
+        msg:'bad request'
+    })
+})
+
 app.listen(port, () => {
   console.log(`app is listing on ${port}`);
 });
